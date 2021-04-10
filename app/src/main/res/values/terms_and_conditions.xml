@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tc">
+        <item>1. Displayed pics are for information and delivered item may vary</item>
+        <item>2. Offer till stock lasts</item>
+        <item>3. Claims are limited to replacement of the item only. No cash refund or legal liability will be entertained</item>
+        <item>4. No Cancelation</item>
+        <item>5. Jaipur jurisdiction only.</item>
+        <item>6. Check goods in front of delivery person</item>
+    </string-array>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:background="@drawable/profile"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/montserrat"
+        android:gravity="start"
+        android:text="@string/login_to_continue"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+<EditText
+    android:autofillHints="@string/enter_name"
+    android:layout_width="match_parent"
+    android:textAlignment="center"
+    android:textColor="#000"
+    android:fontFamily="@font/baloo_bhai"
+    android:layout_height="wrap_content"
+    android:id="@+id/name"
+    android:inputType="textPersonName"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text"
+    app:layout_constraintBottom_toTopOf="@id/relate1"
+    android:background="@drawable/edit_text_style_2"
+    android:padding="15dp"
+    android:layout_marginStart="20dp"
+    android:drawableStart="@drawable/ic_baseline_person_24"
+    android:layout_marginEnd="20dp"
+    android:textSize="18sp"
+    android:hint="@string/enter_name"
+    />
+
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:id="@+id/relate1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/dob"
+        android:layout_marginEnd="20dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/edit_text_style_2"
+        >
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="50dp"
+            android:dropDownWidth="match_parent"
+            android:popupElevation="10dp"
+            android:foregroundTint="#fff"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@drawable/edit_text_style_2"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:autofillHints="@string/enter_your_birthday_date"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_height="wrap_content"
+        android:id="@+id/dob"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relate1"
+        android:background="@drawable/edit_text_style_2"
+        android:padding="15dp"
+        android:layout_marginStart="20dp"
+        android:drawableStart="@drawable/ic_baseline_date_range_24"
+        android:layout_marginEnd="20dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/email"
+        android:hint="@string/enter_your_birthday_date"
+        />
+
+    <EditText
+        android:autofillHints="@string/enter_email_address"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:fontFamily="@font/baloo_bhai"
+        android:inputType="textEmailAddress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dob"
+        android:background="@drawable/edit_text_style_2"
+        android:drawablePadding="@dimen/fragment_title_padding_10"
+        android:padding="15dp"
+        android:layout_marginStart="20dp"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:layout_marginEnd="20dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/delivery_address"
+        android:hint="@string/enter_email_address"
+        />
+
+    <EditText
+        android:autofillHints="@string/address"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        android:id="@+id/delivery_address"
+        android:fontFamily="@font/baloo_bhai"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:background="@drawable/edit_text_style_2"
+        android:padding="15dp"
+        android:layout_marginStart="20dp"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@id/login_btn"
+        android:textSize="18sp"
+        android:hint="@string/address"
+        />
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="#4885FD"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delivery_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

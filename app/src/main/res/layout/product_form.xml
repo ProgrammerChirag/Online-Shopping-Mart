@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EBF0FF"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <EditText
+
+        android:textSize="18sp"
+        android:inputType="textAutoCorrect"
+        android:id="@+id/productName"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/item"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="@dimen/fragment_title_padding_10"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+
+        <EditText
+        android:textSize="18sp"
+        android:inputType="text"
+        android:id="@+id/productCategory"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/head"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="@dimen/fragment_title_padding_10"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="text"
+        android:id="@+id/productType"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/product_type"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="text"
+        android:id="@+id/productSizeText"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/product_size"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="text"
+        android:id="@+id/productColor"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/product_color"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="number"
+        android:id="@+id/quantityInOnePack"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/pcs_in_pack"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="text"
+        android:id="@+id/Brand"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/product_brand"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="numberDecimal"
+        android:id="@+id/MRP"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/mrp"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="numberDecimal"
+        android:id="@+id/SellingPrice"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/selling_price"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="numberDecimal"
+        android:id="@+id/productDiscount"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/product_discount"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+    <EditText
+        android:textSize="18sp"
+        android:inputType="number"
+        android:id="@+id/orderQuantity"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/order_quantity"
+        android:textColor="#000"
+        android:fontFamily="@font/baloo_bhai"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="" />
+
+</LinearLayout>

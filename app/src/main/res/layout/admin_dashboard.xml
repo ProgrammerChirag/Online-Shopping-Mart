@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:background="#EBF0FF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="AdminPanel.AdminDashBoard">
+
+    <include
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/custom_dialog_2"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraint_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+  <androidx.appcompat.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#EBF0FF"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:id="@+id/toolbar4"
+      app:navigationIcon="?attr/homeAsUpIndicator"
+      >
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+       <TextView
+           android:textColor="#000"
+           android:textSize="18sp"
+           android:fontFamily="@font/roboto_medium"
+           android:text="@string/admin_dashboard"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="5dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/AddData"
+        app:layout_constraintRight_toLeftOf="@id/ShowData"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar4"
+        android:layout_marginTop="15dp"
+        app:cardElevation="@dimen/fragment_title_padding_10"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background1"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/add_products"
+                android:textColor="#fff"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="5dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/ShowData"
+        app:layout_constraintLeft_toRightOf="@id/AddData"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar4"
+        android:layout_marginTop="15dp"
+        app:cardElevation="@dimen/fragment_title_padding_10"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background2"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/get_order_list"
+                android:textColor="#fff"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="5dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/ShowProductList"
+        app:layout_constraintLeft_toLeftOf="@id/AddData"
+        app:layout_constraintTop_toBottomOf="@id/AddData"
+        android:layout_marginTop="15dp"
+        app:cardElevation="@dimen/fragment_title_padding_10"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background_3"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/show_products"
+                android:textColor="#fff"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

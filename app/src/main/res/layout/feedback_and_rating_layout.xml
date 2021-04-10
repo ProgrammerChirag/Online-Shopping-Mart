@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradiant_1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBF0FF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/rate_product"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="18sp"
+        />
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <RatingBar
+        android:stepSize="1"
+        android:id="@+id/ratingBar"
+        android:alpha="1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:numStars="5"
+        android:rating="3"
+        android:theme="@style/RatingBar"
+        />
+
+    <TextView
+        android:id="@+id/ratingTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@id/ratingBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/average"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_margin="5dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar13"
+        android:layout_margin="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ratingTag"
+        >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:background="@drawable/shape2"
+            android:padding="@dimen/fragment_title_padding_10"
+            android:id="@+id/productImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="@dimen/fragment_title_padding_12"
+            app:riv_corner_radius="@dimen/fragment_title_padding_10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/product_image"
+            />
+
+        <TextView
+            android:layout_marginStart="@dimen/fragment_title_padding_10"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:id="@+id/productName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            app:layout_constraintLeft_toRightOf="@id/productImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textAlignment="textStart"
+            android:text="@string/product_name_parker_pen_single_piece"
+            android:layout_marginTop="@dimen/fragment_title_padding_10"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+
+            android:id="@+id/feedBack"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="@dimen/fragment_title_padding_10"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/fragment_title_padding_10"
+            android:layout_marginBottom="20dp"
+            android:autofillHints=""
+            android:background="@drawable/shape2"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="@string/enter_your_feedback"
+            android:inputType="textMultiLine"
+            android:textAlignment="center"
+            android:textColor="#00A8FF"
+            android:textColorHint="#00A8FF"
+            app:layout_constraintBottom_toTopOf="@+id/done"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+        <TextView
+        app:layout_constraintTop_toBottomOf="@id/feedBack"
+        android:id="@+id/done"
+        android:layout_margin="@dimen/fragment_title_padding_10"
+        android:padding="10dp"
+        android:textColor="#00A8FF"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/submit"
+        android:textAlignment="center"
+        android:gravity="center_horizontal|center_vertical"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape2"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

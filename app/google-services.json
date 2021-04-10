@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "144245076144",
+    "firebase_url": "https://online-shopping-mart-29c0d-default-rtdb.firebaseio.com",
+    "project_id": "online-shopping-mart-29c0d",
+    "storage_bucket": "online-shopping-mart-29c0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144245076144:android:1c2e54b4224687bf6a4b75",
+        "android_client_info": {
+          "package_name": "com.selflearn.rpsstationary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144245076144-k79lupj9nq0pl9kt5vrh5jvg5d1qokou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.selflearn.rpsstationary",
+            "certificate_hash": "502ec1ffd16efc6b33c2fafd7fd93e104d253445"
+          }
+        },
+        {
+          "client_id": "144245076144-iqq29906ci1uvu4hdtsvagl25g5j3ng3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdJJ021M60b8IKMisFigbZXSzuUHlMutc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144245076144-iqq29906ci1uvu4hdtsvagl25g5j3ng3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

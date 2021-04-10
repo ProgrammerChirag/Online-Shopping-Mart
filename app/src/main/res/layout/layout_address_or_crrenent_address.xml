@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="133dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/get_current_location_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/get_current_location_btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_style4"
+                    android:drawableEnd="@drawable/ic_geo_locate"
+                    android:padding="10dp"
+                    android:text="@string/use_my_current_location"
+                    android:textAllCaps="false"
+                    android:textColor="#25CCF7" />
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_margin="20sp"
+                android:background="#000"
+                app:layout_constraintTop_toBottomOf="@id/get_current_location_btn" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/baloo_bhai"
+                android:text="@string/or_you_can_fill_your_location_from_here"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:fillViewport="true"
+                android:scrollbars="vertical"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text"
+                tools:ignore="NestedScrolling">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/pin_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20sp"
+                        android:autofillHints=""
+                        android:digits="0123456789"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:hint="@string/pincode"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="10dp" />
+
+
+                    <EditText
+                        android:id="@+id/building_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20sp"
+                        android:autofillHints=""
+                        android:fontFamily="@font/baloo_bhai"
+                        android:hint="@string/house_number_or_building_name"
+                        android:inputType="textPostalAddress"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/road_name_area_colony"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20sp"
+                        android:autofillHints=""
+                        android:drawableEnd="@drawable/ic_search_icon"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:hint="@string/road_name_area_colony"
+                        android:inputType="textPostalAddress"
+                        android:padding="10dp" />
+
+
+                    <EditText
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20sp"
+                        android:autofillHints=""
+                        android:drawableEnd="@drawable/ic_search_icon"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:hint="@string/city"
+                        android:inputType="textPostalAddress"
+                        android:padding="10dp" />
+
+
+                    <EditText
+                        android:id="@+id/state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20sp"
+                        android:autofillHints=""
+                        android:fontFamily="@font/baloo_bhai"
+                        android:hint="@string/state"
+                        android:inputType="textPostalAddress"
+                        android:padding="10dp" />
+
+
+                    <EditText
+                        android:id="@+id/landmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20sp"
+                        android:autofillHints=""
+                        android:fontFamily="@font/baloo_bhai"
+                        android:hint="@string/landmark_optional"
+                        android:inputType="text"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20sp"
+                        android:autofillHints=""
+                        android:fontFamily="@font/baloo_bhai"
+                        android:hint="@string/enter_name"
+                        android:inputType="text"
+                        android:padding="10dp" />
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20sp"
+                        android:autofillHints=""
+                        android:digits="0123456789"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:hint="@string/_10_digit_phone_number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:padding="10dp" />
+
+
+                    <androidx.cardview.widget.CardView
+
+                        android:id="@+id/saveBtn_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@android:color/transparent"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                        <Button
+                            android:id="@+id/saveBtn_location1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/item_btn_style1"
+                            android:drawableEnd="@drawable/ic_arrow_forward_white"
+                            android:fontFamily="@font/montserrat"
+                            android:padding="10dp"
+                            android:text="@string/save"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

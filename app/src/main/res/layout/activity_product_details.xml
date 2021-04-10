@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="#EBF0FF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="DashBoard.ActivityProductDetail">
+
+    <include
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/custom_dialog_2"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout_payment_page"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_btn_style2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/AddToCartButton"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/pay"
+            android:text="@string/order_now"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:paddingLeft= "40dp"
+            android:paddingRight="40dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/baloo_bhai"
+            />
+
+        <Button
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/pay"
+            android:id="@+id/AddToCartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/item_btn_style3"
+            android:text="@string/add_to_cart"
+            android:textAllCaps="true"
+            android:textColor="#5061FF"
+            android:paddingLeft= "50dp"
+            android:paddingRight="50dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/baloo_bhai"
+            android:orientation="horizontal"
+            />
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:id="@+id/toolbar2"
+                    app:navigationIcon="?attr/homeAsUpIndicator"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/goToCart"
+                            android:background="@android:color/transparent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginEnd="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_order"
+                            android:contentDescription="@string/todo" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.viewpager2.widget.ViewPager2
+
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+                    android:id="@+id/product_images"
+                    android:layout_marginLeft="@dimen/fragment_title_padding_10"
+                    android:layout_marginRight="@dimen/fragment_title_padding_10"
+                    android:background="@drawable/shape2"
+                    />
+
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/product_images"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/dot"
+                    app:dotsColor="@android:color/holo_blue_dark"
+                    app:selectedDotColor="@color/colorPrimary"
+                    app:dotsSize="10dp"
+                    app:dotsSpacing="5dp"
+                    app:progressMode="true"
+                    />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:padding="5dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product_images"
+                    android:background="@android:color/transparent"
+                    android:layout_margin="15dp"
+                    android:textSize="30sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/parker_pen_single_piece"
+                    android:id="@+id/product_name"
+                    android:textStyle="normal"
+                    />
+
+
+                <include
+                    android:id="@+id/layout_price_and_discount"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    layout="@layout/price_and_discount"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/quantity"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="@dimen/fragment_title_padding_10"
+                    android:layout_width="wrap_content"
+                    android:padding="2dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/shape7"
+                    app:layout_constraintTop_toBottomOf="@id/layout_price_and_discount"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/quantityTag"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/fragment_title_padding_10"
+                        android:background="@android:color/transparent"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/quantity"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+
+                        android:layout_marginStart="@dimen/fragment_title_padding_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@+id/quantityTag"
+                        app:textSize="7sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/shape8"
+                        app:textColor="#000"
+                        app:backGroundColor="@android:color/transparent"
+                        android:id="@+id/elegantNumberButton"
+
+                        tools:ignore="SmallSp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:textColor="#000"
+                    android:textStyle="normal"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="15dp"
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/quantity"
+                    android:layout_marginStart="@dimen/fragment_title_padding_10"
+                    android:background="@drawable/shape3"
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

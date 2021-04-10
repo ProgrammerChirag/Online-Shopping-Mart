@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:background="#EBF0FF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:visibility="invisible"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/cart_is_empty"
+        android:contentDescription="@string/todo"
+        android:id="@+id/cart_is_empty_message"
+        />
+
+    <include
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/custom_dialog_2"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#EBF0FF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="10dp"
+            android:id="@+id/toolbar6"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+           />
+
+        <androidx.core.widget.NestedScrollView
+
+            app:layout_constraintTop_toBottomOf="@id/toolbar6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+
+                    android:id="@+id/cart_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="@dimen/fragment_title_padding_10"
+                    android:paddingBottom="@dimen/fragment_title_padding_10"
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#E84118"
+            android:text="@string/shop_now"
+            android:id="@+id/shop_now"
+            android:textColor="#fff"
+            />
+
+        <com.ebanx.swipebtn.SwipeButton
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/swipe_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inner_text="@string/swipe_to_pay"
+            app:inner_text_color="@android:color/white"
+            app:inner_text_size="16sp"
+            app:inner_text_top_padding="18dp"
+            app:inner_text_bottom_padding="18dp"
+            app:button_image_height="60dp"
+            app:button_image_width="70dp"
+            app:button_left_padding="20dp"
+            app:button_right_padding="20dp"
+            app:button_top_padding="20dp"
+            app:button_bottom_padding="20dp"
+            app:button_background="@drawable/btn_style5"
+            app:inner_text_background="@drawable/shape9"
+            app:initial_state="disabled"
+            app:has_activate_state="true"
+            app:button_image_enabled="@drawable/ic_baseline_payment_24"
+            app:button_image_disabled="@drawable/ic_baseline_payment_24"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/amount_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style5"
+            app:layout_constraintBottom_toTopOf="@id/swipe_btn"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:text="@string/amount_36_inr"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#000"
+            android:textAlignment="center"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

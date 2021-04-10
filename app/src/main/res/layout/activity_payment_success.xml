@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:background="#E84118"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="PaymentS.PaymentSuccess"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/custom_dialog_2"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:src="@drawable/process_completed"
+        android:contentDescription="@string/todo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+
+    <TextView
+        android:id="@+id/orderPlaced"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="22sp"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:layout_marginTop="@dimen/fragment_title_padding_10"
+        android:text="@string/order_placed"
+        />
+
+    <Button
+        android:id="@+id/explore_more"
+        android:textColor="#E84118"
+        android:text="@string/explore_more"
+        android:fontFamily="@font/roboto_medium"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="@dimen/fragment_title_padding_10"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/shape2"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

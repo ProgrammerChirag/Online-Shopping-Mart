@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+
+    android:padding="5dp"
+    android:background="@drawable/shape3"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/product_name"
+    android:layout_marginLeft="@dimen/fragment_title_padding_10"
+    android:layout_marginRight="@dimen/fragment_title_padding_10"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/priceTag"
+        android:text="@string/price"
+        android:textColor="#000"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cuttedprice"
+        app:layout_constraintLeft_toRightOf="@+id/RealPrice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:text="@string/_198"
+        />
+
+    <TextView
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/priceTag"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/RealPrice"
+        android:layout_marginStart="@dimen/fragment_title_padding_10"
+        android:text="@string/_84_99_inr"
+        android:textColor="#FF0000"
+        android:fontFamily="@font/roboto_medium"
+        />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/discount"
+        android:layout_marginEnd="@dimen/fragment_title_padding_10"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/shape_discount"
+        android:text="@string/_100"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/discount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/discount"
+        android:id="@+id/discountTag"
+        android:layout_marginEnd="@dimen/fragment_title_padding_10"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_medium"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

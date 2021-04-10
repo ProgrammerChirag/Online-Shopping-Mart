@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.selflearn.rpsstationary">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name="MultiProductActivity.CashOnDeliveryActivity"></activity>
+        <activity android:name="AdminPanel.ShowProductAfterUploading" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key" />
+
+        <activity android:name="AdminPanel.UploadProductImages"></activity>
+        <activity
+            android:name="AdminPanel.AddNewProduct"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="AdminPanel.AdminDashBoard"></activity>
+        <activity android:name="HelpAndSupport.HelpsAndSupports" />
+        <activity android:name="PaymentS.PaymentFailed" />
+        <activity android:name="PaymentS.PaymentSuccess" />
+        <activity android:name="DashBoard.Rating_Activity"></activity>
+        <activity android:name="AdminPanel.EditProductImages" />
+        <activity android:name="AdminPanel.EditDetailsActivity" />
+        <activity android:name="DashBoard.ActivitySetting" />
+        <activity android:name="DashBoard.ActivityEditProfile"></activity>
+        <activity android:name="DashBoard.EditAddress" />
+        <activity android:name="DashBoard.ActivityMyAccount"></activity>
+        <activity android:name="DashBoard.MyOrderActivity" />
+        <activity android:name="DashBoard.ActivityEditAddress" />
+        <activity android:name="DashBoard.ShowProducts" />
+        <activity android:name="DashBoard.ShowTermsAndConditions" />
+        <activity android:name=".Payment" />
+        <activity android:name="DashBoard.ActivityProductDetail"></activity>
+        <activity android:name="AuthenticationAndLogin.MobileAuthenticationActivity" />
+        <activity android:name="AuthenticationAndLogin.AccountCreationForm" />
+        <activity android:name="AdminPanel.ShowProductDetail"></activity>
+        <activity android:name="AdminPanel.ShowAllProduct"></activity>
+        <activity android:name="DashBoard.DashBoardMainUI"></activity>
+        <activity
+            android:name="in.juspay.godel.PaymentActivity"
+            android:hardwareAccelerated="true"
+            android:label="Processing your payment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="DashBoard.ActivityChooseCategory" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="AddressAndMap.MapActivity" />
+        <activity android:name="AddressAndMap.TakingAddressActivity" /> <!-- multi product ordering activities. -->
+        <activity android:name="MultiProductActivity.ChooseAddressActivity" />
+        <activity android:name="MultiProductActivity.PaymentPage" />
+        <activity android:name="MultiProductActivity.PaymentSuccess" />
+        <activity android:name="MultiProductActivity.ProductDetailsPage" /> <!-- multi product ordering activities. -->
+        <activity android:name="DashBoard.ApplyFilterActivity"></activity>
+        <activity android:name="DashBoard.ActivityCart"></activity>
+        <activity android:name="PaymentS.PaymentPage"></activity>
+        <activity android:name="DashBoard.ActivityChooseAddress"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="instamojo.orderauth.url"
+            android:value="https://shsjshs.000webhostapp.com/access_token.php" />
+    </application>
+
+</manifest>

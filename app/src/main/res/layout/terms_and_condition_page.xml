@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:background="#EBF0FF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:contentDescription="@string/todo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
+        android:textColor="#000"
+        android:id="@+id/applyTC"
+        android:padding="@dimen/fragment_title_padding_10"
+        android:text="@string/terms_and_conditions_apply"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/shape3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/showTAndC"
+        app:layout_constraintRight_toRightOf="@id/showTAndC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/showTAndC"
+        app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        android:id="@+id/showTAndC"
+        android:padding="@dimen/fragment_title_padding_10"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@id/checkBox"
+        android:layout_margin="15dp"
+        android:background="@drawable/shape3"
+        />
+
+    <CheckBox
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="@dimen/fragment_title_padding_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginBottom="@dimen/fragment_title_padding_10"
+        android:text="@string/i_agreed_and_read_all_above_term_and_conditions"
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/submitBtn"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape4"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:id="@+id/submitBtn"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

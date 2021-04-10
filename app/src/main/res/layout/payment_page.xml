@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:background="#EBF0FF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/toolbar8"
+        android:background="#EBF0FF"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="@string/set_payment_method"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="@dimen/fragment_title_padding_10"
+        app:cardElevation="@dimen/fragment_title_padding_10"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <EditText
+                android:textAlignment="center"
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fragment_title_padding_10"
+                android:layout_marginRight="@dimen/fragment_title_padding_10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/shape7"
+                android:padding="@dimen/fragment_title_padding_10"
+                android:textSize="18sp"
+                android:inputType="textPersonName"
+                android:id="@+id/name"
+                android:fontFamily="@font/baloo_bhai"
+                android:hint="@string/name"
+                android:autofillHints="" />
+
+            <EditText
+                android:textAlignment="center"
+                android:background="@drawable/shape7"
+                android:id="@id/email"
+                android:layout_marginLeft="@dimen/fragment_title_padding_10"
+                android:layout_marginRight="@dimen/fragment_title_padding_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:padding="@dimen/fragment_title_padding_10"
+                android:textSize="18sp"
+                android:autofillHints=""
+                android:textColor="#000"
+                android:fontFamily="@font/baloo_bhai"
+                android:hint="@string/enter_email_address"
+                android:layout_marginTop="20dp"
+                android:inputType="textEmailAddress"
+                />
+<Button
+    android:padding="@dimen/fragment_title_padding_10"
+    app:layout_constraintBottom_toTopOf="@id/cod"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape"
+    android:layout_marginLeft="@dimen/fragment_title_padding_10"
+    android:layout_marginRight="@dimen/fragment_title_padding_10"
+    android:textColor="#fff"
+    android:text="@string/pay_now"
+    android:fontFamily="@font/roboto_medium"
+    android:id="@+id/pay_now"
+    />
+
+     <Button
+         android:visibility="gone"
+         android:padding="@dimen/fragment_title_padding_10"
+         app:layout_constraintBottom_toBottomOf="parent"
+         android:id="@+id/cod"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         android:layout_marginLeft="@dimen/fragment_title_padding_10"
+         android:layout_marginRight="@dimen/fragment_title_padding_10"
+         android:textColor="#fff"
+         android:text="@string/cash_on_delivery"
+         android:layout_marginTop="20dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/shape5"
+         />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

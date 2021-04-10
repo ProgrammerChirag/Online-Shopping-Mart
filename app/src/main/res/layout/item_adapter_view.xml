@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    app:cardBackgroundColor="#fff"
+    app:cardElevation="@dimen/fragment_title_padding_10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+
+        android:src="@drawable/image1"
+        android:padding="@dimen/fragment_title_padding_10"
+        android:id="@+id/image"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius="10dp"
+        android:adjustViewBounds="true"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    </com.makeramen.roundedimageview.RoundedImageView>
+
+</androidx.cardview.widget.CardView>

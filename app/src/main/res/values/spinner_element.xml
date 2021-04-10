@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_elements">
+        <item name = "choose">choose your profession</item>
+        <item name="student">student</item>
+        <item name="teacher">teacher</item>
+        <item name="professional">professional</item>
+        <item name="parents">parents</item>
+    </string-array>
+</resources>

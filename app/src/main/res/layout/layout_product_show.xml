@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/shape10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/fragment_title_padding_10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:visibility="visible"
+        android:layout_margin="5dp"
+        app:layout_constraintRight_toLeftOf="@id/Price"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/AddToCart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/_3000"
+        android:id="@+id/cuttedprice"
+        android:layout_marginBottom="@dimen/fragment_title_padding_10"
+        android:layout_marginStart="20dp"
+        />
+    <!--
+    with this code the price will cut-->
+    <!--someTextView.setPaintFlags(someTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);-->
+
+    <TextView
+        android:padding="5dp"
+        android:background="@drawable/shape2"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/AddToCart"
+        app:layout_constraintLeft_toRightOf="@id/cuttedprice"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/_2799_00"
+        android:id="@+id/Price"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="#000"
+        android:layout_marginBottom="@dimen/fragment_title_padding_10"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        app:layout_constraintBottom_toTopOf="@id/Price"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/productname"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_images"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="#000"
+        android:layout_marginBottom="5dp"
+        android:textSize="18sp"
+        />
+
+    <ImageView
+        app:layout_constraintBottom_toTopOf="@id/product_name"
+        android:id="@+id/product_images"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/product_image"
+        android:contentDescription="@string/todo" />
+
+
+    <TextView
+
+        android:id="@+id/discount"
+        android:layout_width="50dp"
+        android:background="@drawable/shape_discount"
+        android:layout_marginEnd="@dimen/fragment_title_padding_10"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:text="@string/_20"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/fragment_title_padding_10"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/product_name"
+        />
+
+    <Button
+        android:visibility="visible"
+        android:stateListAnimator="@null"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/shape5"
+        android:text="@string/add_to_bag"
+        android:layout_marginBottom="20dp"
+        android:padding="@dimen/fragment_title_padding_10"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:id="@+id/AddToCart"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_medium"
+        />
+
+        <Button
+            android:id="@+id/goToCart"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/cuttedprice"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:stateListAnimator="@null"
+            android:background="@drawable/shape9"
+            android:textColor="#fff"
+            android:text="@string/go_to_bag"
+            android:fontFamily="@font/roboto_medium"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
